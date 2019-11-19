@@ -8,8 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body.no-js {
-  display: none;
+.no-js {
+  visibility: hidden;
+  opacity: 0;
+}
+.js {
+  visibility: visible;
+  opacity: 1;
 }
 article,
 aside,
