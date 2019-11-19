@@ -46,7 +46,7 @@ const StyledImage = Styled(Image)`
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Christmas Eve" />
     <TextContainer className="mainContent">
       <a
         href="https://westwoodscc.org"
