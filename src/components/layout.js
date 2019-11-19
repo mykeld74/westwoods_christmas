@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import BGSection from "../components/backgroundImage"
 import "./layout.css"
