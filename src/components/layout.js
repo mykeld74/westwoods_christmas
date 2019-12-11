@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
           title
         }
       }
-      imageSharp(fluid: { originalName: { eq: "nativityBG.jpg" } }) {
+      imageSharp(fluid: { originalName: { eq: "snow.png" } }) {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }

@@ -9,13 +9,25 @@ import SEO from "../components/seo"
 const TextContainer = Styled.div`
   box-sizing: border-box;
   width: 100%;
-  max-width: 980px;
-  margin: 0 auto 0;
-  background: rgba(255, 255, 255, .6);
+  text-align: center;
+  margin: 150px auto 0;
   padding: 20px;
   border-radius: 20px;
+  color: #fff;
+  
   .center{
     text-align: center;
+  }
+  .subhead{
+    color: #fff;
+    line-height: 1.4;
+  }
+  .gold{
+    background: -webkit-linear-gradient(#BF9356, #FADEA4, #BF9356);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #444;
   }
   a{
     color: inherit;
@@ -25,51 +37,46 @@ const TextContainer = Styled.div`
       color: #ed2227;
     }
   }
-  .tagline{
-    font-family: 'Caveat', cursive;
-    text-align: center;
-    font-size: calc(16px + 5vw);
-    text-shadow: 3px 3px 6px #676767;
-    
-  }
-  @media (max-width: 468px){
-    text-align: center;
-    border-radius: 0;
-  }
 `
 
-const StyledImage = Styled(Image)`
+const Ornament = Styled(Image)`
+  position: absolute !important;
+  width: 100px;
+  top: 0;
+  left: calc(50% - 50px);
+`
+
+const ChristmasLogo = Styled(Image)`
   width: calc(100% - 40px);
-  max-width: 300px;
-  margin: 0 auto 30px;
+  max-width: 600px;
+  margin: 20px auto 30px;
 `
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Christmas Eve" />
+    <Ornament fluid={data.ornament.fluid} />
     <TextContainer className="mainContent">
       <a
         href="https://westwoodscc.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h1 className="center">Westwoods Community Church</h1>
-        <StyledImage fluid={data.logo.fluid} />
+        <h1 className="center gold">Dec 24th | Services at 4 and 5:30pm</h1>
+        <h2 className="center subhead">
+          A casual and meaningful community celebration of Christmas.
+        </h2>
+        <ChristmasLogo fluid={data.christmasLogo.fluid} />
       </a>
-      <h1>Join us for our Christmas Eve Services</h1>
-      <h2>
-        Tuesday, December 24<sup>th</sup> @ 4 and 5:30pm
-      </h2>
-      <h2>
-        <a
-          href="https://westwoodscc.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More about Westoods Here &raquo;
-        </a>
-      </h2>
-      <h3 className="tagline">You Belong Here!</h3>
+
+      <a
+        href="https://westwoodscc.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h2>Westwoods Community Church</h2>
+        <h3>7700 W Woodard Drive | Lakewood, CO</h3>
+      </a>
     </TextContainer>
   </Layout>
 )
@@ -79,6 +86,18 @@ export const query = graphql`
     logo: imageSharp(fluid: { originalName: { eq: "ww-logo.png" } }) {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    ornament: imageSharp(fluid: { originalName: { eq: "ornament.png" } }) {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    christmasLogo: imageSharp(
+      fluid: { originalName: { eq: "christmasLogo.png" } }
+    ) {
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }

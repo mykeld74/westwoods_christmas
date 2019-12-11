@@ -30,10 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `IBM+Plex+Sans\:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i`,
-          `Caveat\:400,700`,
-        ],
+        fonts: [`Skranji:400,700`, `Caveat\:400,700`, `Marko+One`],
         display: "swap",
       },
     },
