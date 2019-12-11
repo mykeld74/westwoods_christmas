@@ -30,7 +30,7 @@ const TextContainer = Styled.div`
     -webkit-text-stroke-color: #444;
   }
   a{
-    color: inherit;
+    color: #fff;
     text-decoration: none;
     transition: all .2s ease-in-out;
     &:hover{
@@ -57,23 +57,17 @@ const IndexPage = ({ data }) => (
     <SEO title="Christmas Eve" />
     <Ornament fluid={data.ornament.fluid} />
     <TextContainer className="mainContent">
+      <h1 className="center gold">Dec 24th | Services at 4 and 5:30pm</h1>
+      <h2 className="center subhead">
+        A casual and meaningful community celebration of Christmas.
+      </h2>
       <a
         href="https://westwoodscc.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h1 className="center gold">Dec 24th | Services at 4 and 5:30pm</h1>
-        <h2 className="center subhead">
-          A casual and meaningful community celebration of Christmas.
-        </h2>
         <ChristmasLogo fluid={data.christmasLogo.fluid} />
-      </a>
 
-      <a
-        href="https://westwoodscc.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
         <h2>Westwoods Community Church</h2>
         <h3>7700 W Woodard Drive | Lakewood, CO</h3>
       </a>
