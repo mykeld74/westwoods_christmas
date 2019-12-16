@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Counter from "../components/countdown"
 
 const TextContainer = Styled.div`
   box-sizing: border-box;
@@ -67,6 +68,8 @@ const IndexPage = ({ data }) => (
         rel="noopener noreferrer"
       >
         <ChristmasLogo fluid={data.christmasLogo.fluid} />
+
+        <Counter />
 
         <h2>Westwoods Community Church</h2>
         <h3>7700 W Woodard Drive | Lakewood, CO</h3>

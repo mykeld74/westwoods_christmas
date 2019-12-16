@@ -11,6 +11,7 @@ const BGSection = styled(BackgroundImage)`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 70px;
 `
 
 export default BGSection
